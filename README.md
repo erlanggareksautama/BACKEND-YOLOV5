@@ -1,6 +1,7 @@
 # 🚏 BACKEND-YOLOV5 — Deteksi Kondisi Halte Berbasis Laporan Warga
 
-<img width="720" height="1280" alt="image" src="https://github.com/user-attachments/assets/361b22fb-8fa3-4851-8937-f6e775fad814" />
+## Confusson Matrix YOLOV5 (Tingkat Kepercayaan)
+<img width="3000" height="2250" alt="image" src="https://github.com/user-attachments/assets/e4aa062b-4399-4c7e-befb-a6f629a5bf62" />
 
 ## 📌 Skenario Penggunaan
 
@@ -34,7 +35,7 @@ Repository ini berisi **backend YOLOv5** yang digunakan untuk melakukan *object 
 
 ## 📊 Evaluasi Model
 
-
+<img width="720" height="1280" alt="image" src="https://github.com/user-attachments/assets/361b22fb-8fa3-4851-8937-f6e775fad814" />
 
 **Contoh hasil inferensi:**
 Pada gambar uji lapangan, model berhasil mendeteksi kelas `shelter` pada sebuah halte dengan tingkat keyakinan **0.51**. Confidence yang tergolong sedang ini — meski recall kelas `shelter` tinggi (0.95) pada evaluasi keseluruhan — mengindikasikan bahwa kondisi pencahayaan, sudut pengambilan gambar, atau oklusi oleh objek lain (pohon, tiang listrik) di lapangan masih dapat menurunkan skor keyakinan deteksi. Pada dashboard Dishub, hasil semacam ini tetap ditampilkan sebagai indikasi objek "shelter terdeteksi", namun dengan skor keyakinan yang perlu dipertimbangkan petugas saat verifikasi.
