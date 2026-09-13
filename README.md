@@ -69,11 +69,12 @@ Output deteksi (kelas objek + skor keyakinan) dikirim melalui API backend ke **d
 
 ```
 BACKEND-YOLOV5/
-├── data/              # konfigurasi dataset (.yaml)
+├── data/             # konfigurasi dataset (.yaml)
 ├── weights/           # model hasil training (best.pt)
 ├── detect.py          # script inferensi
 ├── train.py           # script training
 ├── requirements.txt
+├── best (1).pt
 └── README.md
 ```
 
