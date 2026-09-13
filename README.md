@@ -1,5 +1,7 @@
 # 🚏 BACKEND-YOLOV5 — Deteksi Kondisi Halte Berbasis Laporan Warga
 
+<img width="720" height="1280" alt="image" src="https://github.com/user-attachments/assets/361b22fb-8fa3-4851-8937-f6e775fad814" />
+
 ## 📌 Skenario Penggunaan
 
 Model **YOLOv5** ini dikembangkan untuk mendukung proses verifikasi laporan warga terkait **kondisi fasilitas halte** di lingkungan perkotaan. Warga dapat mengirimkan laporan beserta foto kondisi halte melalui aplikasi pelaporan. Foto yang dikirimkan warga kemudian diproses oleh sistem **object detection**, dan hasilnya ditampilkan pada **dashboard milik Dinas Perhubungan (Dishub)**.
