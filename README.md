@@ -28,7 +28,7 @@ Repository ini berisi **backend YOLOv5** yang digunakan untuk melakukan *object 
 |---|---|
 | Sumber | Roboflow (custom dataset) |
 | Jumlah data | ± 2.000 foto |
-| Kelas anotasi | `crosswalk`, `road`, `shelter`, `sidewalk`, `sign`, `street_light`, `warning-tile` |
+| Kelas anotasi | `crosswalk`, `horizontal-directional-tile`, `road`, `shelter`, `sidewalk`, `sign`, `street_light`, `vertical-directional-tile`, `warning-tile` |
 | Format | YOLOv5 (`.txt` label + `.yaml` config) |
 
 > Catatan: kelas `crosswalk`, `horizontal/vertical-directional-tile`, `road`, dan `warning-tile` merupakan turunan/pendukung dari parameter **sidewalk & guiding block**, sedangkan `shelter` dan `sign` merepresentasikan parameter kanopi dan papan tanda halte.
