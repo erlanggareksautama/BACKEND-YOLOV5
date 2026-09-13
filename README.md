@@ -25,7 +25,7 @@ Repository ini berisi **backend YOLOv5** yang digunakan untuk melakukan *object 
 |---|---|
 | Sumber | Roboflow (custom dataset) |
 | Jumlah data | ± 2.000 foto |
-| Kelas anotasi | `crosswalk`, `horizontal-directional-tile`, `road`, `shelter`, `sidewalk`, `sign`, `street_light`, `vertical-directional-tile`, `warning-tile` |
+| Kelas anotasi | `crosswalk`, `road`, `shelter`, `sidewalk`, `sign`, `street_light`, `warning-tile` |
 | Format | YOLOv5 (`.txt` label + `.yaml` config) |
 
 > Catatan: kelas `crosswalk`, `horizontal/vertical-directional-tile`, `road`, dan `warning-tile` merupakan turunan/pendukung dari parameter **sidewalk & guiding block**, sedangkan `shelter` dan `sign` merepresentasikan parameter kanopi dan papan tanda halte.
@@ -36,11 +36,6 @@ Repository ini berisi **backend YOLOv5** yang digunakan untuk melakukan *object 
 
 **Contoh hasil inferensi:**
 Pada gambar uji lapangan, model berhasil mendeteksi kelas `shelter` pada sebuah halte dengan tingkat keyakinan **0.51**. Confidence yang tergolong sedang ini — meski recall kelas `shelter` tinggi (0.95) pada evaluasi keseluruhan — mengindikasikan bahwa kondisi pencahayaan, sudut pengambilan gambar, atau oklusi oleh objek lain (pohon, tiang listrik) di lapangan masih dapat menurunkan skor keyakinan deteksi. Pada dashboard Dishub, hasil semacam ini tetap ditampilkan sebagai indikasi objek "shelter terdeteksi", namun dengan skor keyakinan yang perlu dipertimbangkan petugas saat verifikasi.
-
-### Ringkasan Temuan
-- Kelas dengan struktur visual khas dan kontras tinggi (`shelter`, `warning-tile`, `vertical-directional-tile`, `horizontal-directional-tile`) memiliki performa deteksi terbaik.
-- Kelas `sign` dan `road` masih memerlukan penambahan data latih dan variasi sudut pandang.
-- Kelas `crosswalk` dan `street_light` **belum berfungsi dengan baik** — kemungkinan disebabkan oleh jumlah sampel yang minim, kualitas anotasi, atau kemiripan visual dengan objek latar (background).
 
 ### Rekomendasi Perbaikan
 1. Menambah jumlah dan variasi data latih untuk kelas `crosswalk`, `sign`, dan `street_light`.
@@ -56,19 +51,8 @@ Pada gambar uji lapangan, model berhasil mendeteksi kelas `shelter` pada sebuah 
 git clone https://github.com/erlanggareksautama/BACKEND-YOLOV5.git
 cd BACKEND-YOLOV5
 pip install -r requirements.txt
+
 ```
-
-## 🚀 Cara Penggunaan
-
-```bash
-# Deteksi pada satu gambar
-python detect.py --weights weights/best.pt --source path/to/image.jpg --conf 0.4
-
-# Deteksi pada folder gambar
-python detect.py --weights weights/best.pt --source path/to/folder/ --conf 0.4
-```
-
-Hasil deteksi (bounding box + label + confidence score) akan disimpan pada folder `runs/detect/`.
 
 ## 🖥️ Integrasi dengan Dashboard Dishub
 
